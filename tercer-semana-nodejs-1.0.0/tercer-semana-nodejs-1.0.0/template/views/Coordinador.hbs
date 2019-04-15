@@ -1,0 +1,56 @@
+  
+{{>header}}
+<fieldset >
+<legend>
+  Listado de cursos
+</legend>
+ {{{listarCoordinador listado}}}
+</fieldset>
+
+<div class="container">
+  <h2>Coordinador</h2>
+  <br>
+  <p>Crear un curso</p>
+  <form action="/AddCourse" method="post">
+    <div class="form-group">
+      <label >Nombre</label>
+      <input type="text"  class="form-control"  name="nombre" placeholder="Nombre de usuario" required><br>   
+      <label >ID</label>
+      <input type="number"  class="form-control"  name="id" placeholder="id" required><br>       
+      <div class="row">
+        <div class="col">
+         <label >Descripción</label>
+         <input type="text" class="form-control" name="descripcion" placeholder="descripcion" required> 
+       </div>
+       <div class="col">
+         <label >Valor</label>
+         <input type="number" class="form-control" name="valor" placeholder="valor" required>
+       </div>
+        <div class="col">
+         <label >Intensidad</label>
+         <input type="number" class="form-control" name="intensidad" placeholder="intensidad" required>
+       </div>
+        <div class="col">
+         <label >Modalidad</label>
+         <input type="String" class="form-control" name="modalidad" placeholder="modalidad" required>
+       </div>
+       
+     </div>
+     <br>
+     <button class="btn btn-dark">Agregar Curso</button>
+   </div>
+ </form>	
+
+<div>
+    <h2>Usuarios en la plataforma</h2>
+    {{{listarUsuarios usuarios}}}
+</div>
+
+<div>
+    <h2>Usuarios en cursos</h2>
+    {{{listarRegistros registros}}}
+</div>
+
+</div>
+  {{>footer}}
+  

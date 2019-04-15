@@ -1,0 +1,43 @@
+{{>header}}
+<div class="container">
+  <h2>Actualización de información de usuarios</h2>
+  <br>
+
+<div>
+
+{{listarDetalleUsuario usuarios}}
+
+</div>
+
+
+  <form action="/actualizar" method="post">
+    <div class="form-group">
+      <label >Nombre</label>
+      <input type="text"  class="form-control"  name="nombre"  placeholder="Nombre de usuario" required><br>
+      <div class="row">
+        <div class="col">
+         <label >Telefono</label>
+         <input type="number" class="form-control" name="telefono"  placeholder="Telefono" required> 
+       </div>
+       <div class="col">
+         <label >Email</label>
+         <input type="email" class="form-control" name="email"  placeholder="email" required>
+       </div>
+       <div class="col">
+         <label >contraseña</label>
+         <input type="text" class="form-control" name="password" placeholder="contraseña" required>
+       </div>
+         <div class="col">
+         <label >Perfil</label>
+<select name="perfil">
+   <option value="Docente">Docente</option> 
+   <option value="Aspirante">Aspirante</option> > 
+</select>
+       </div>
+     </div>
+     <br>
+     <button class="btn btn-dark">Actualizar</button>
+   </div>
+ </form>	
+</div>
+  {{>footer}}
